@@ -1,0 +1,5 @@
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\bin\Release\BusinessLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\bin\Release\BusinessLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Release\BusinessLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Release\BusinessLayer.pdb

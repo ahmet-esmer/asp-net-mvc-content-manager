@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ModelLayer.SiteDil>
+
+@using  MicroOptik.WebUI.Content.HtmlHelpers;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@helper AlternateBackground(string color)
+ {
+     if (ViewBag.count == null) { ViewBag.count = 0; }
+    <text>style="background-color:@(ViewBag.count % 2 == 1 ? color : "none")"</text>
+      ViewBag.count++;
+ }
+
+
+  <div class="content-box"><!-- Start Content Box -->
+     <div class="content-box-header">
+	      <h3 style="cursor: s-resize;">Site iletişim bilgileri</h3>
+	 <div class="clear"></div>
+	 </div> <!-- End .content-box-header -->
+	 <div style="display: block;" class="content-box-content">
+	 <div style="display: block;" class="tab-content default-tab" id="tab1">
+
+     <div class="linkZemin" >
+             <a href='@Url.Action("Create", "SiteDil")' class="button" >Yeni Site Dil Ekleme</a>
+     </div>
+<table class="tblList" >
+    <tr class="HeaderStyle" >
+        <th>Adi</th>
+        <th>Kodu </th>
+        <th>Dil Iconu</th>
+        <th>Durum</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="RowStyle" @AlternateBackground("#f3f3f3") >
+        <td>
+            @item.Adi
+        </td>
+        <td>
+            @item.Kodu
+        </td>
+        <td>
+            <img src="@Url.Content("~/Content/Products/Sayfa/" + item.Icon )" />
+        </td>
+        <td>
+            @item.Durum
+        </td>
+        <td>
+          @Html.DurumLink("SiteDil", "Durum", item.Durum, item.Id) 
+        </td>
+          <td>
+            @Html.ActionLink(" ", "Delete","SiteDil", 
+            new { id = item.Id, icon = item.Icon },
+            new { @class = "delete" })
+        </td>
+    </tr>
+}
+
+</table>
+
+     <div style="clear:both;"> </div>
+     </div> <!-- End #tab1 -->
+	 </div> <!-- End .content-box-content -->
+	  </div>

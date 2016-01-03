@@ -1,0 +1,8 @@
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\bin\Release\ModelLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\bin\Release\ModelLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\obj\Release\ModelLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\obj\Release\ModelLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\bin\Release\DataAnnotationsExtensions.dll
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\bin\Release\ConfigLibrary.dll
+D:\Projeler\MicroOptik\ApplicationServer\DataAccessLayer\bin\Release\ConfigLibrary.pdb

@@ -1,0 +1,5 @@
+D:\Projeler\MicroOptik\Library\ConvertLibrary\bin\Release\ConvertLibrary.dll
+D:\Projeler\MicroOptik\Library\ConvertLibrary\bin\Release\ConvertLibrary.pdb
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Release\ConvertLibrary.dll
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Release\ConvertLibrary.pdb

@@ -1,0 +1,135 @@
+﻿@model IEnumerable<ModelLayer.IcerikBaslik>
+
+@using MicroOptik.WebUI.Content.HtmlHelpers;
+@using ModelLayer;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+    
+    string sayfaDil = Request.QueryString["dil"]; 
+}
+
+@helper AlternateBackground(string color)
+    {
+     if (ViewBag.count == null) { ViewBag.count = 0; }
+    <text>style="background-color:@(ViewBag.count % 2 == 1 ? color : "none")"</text>
+     ViewBag.count++;
+}
+
+
+   @section Scripts{
+
+   <script type="text/javascript">
+
+       function IcerikSirala(id, val) {
+           $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Siralama", "IcerikBaslik")',
+                data: "id=" + id + "&sira=" + val,
+                success: function (result) {
+                    if (result.success) {
+                        $("body").append(result.message);
+                    }
+                },
+                error: function (req, status, error) {
+                    alert("İşlem hata ile sonuçlandı.");
+                }
+            });
+       } 
+
+   </script>
+
+   }
+
+
+ <div class="content-box"><!-- Start Content Box -->
+				
+				<div class="content-box-header">
+					<h3 style="cursor: s-resize;">Sayfalar</h3>
+					<ul style="display: block;" class="content-box-tabs">
+        
+        
+
+                    @foreach (SiteDil dil in ViewBag.SiteDil)
+                     {
+                        <li><a href="@Url.Action("Index", "IcerikBaslik", new { dil = dil.Kodu })"> @dil.Adi</a></li>
+                     }      
+                       
+					</ul>
+					<div class="clear"></div>
+				</div> <!-- End .content-box-header -->
+
+
+				
+				<div style="display: block;"  class="content-box-content">
+					
+			   <div style="display: block;" class="tab-content default-tab" id="tab1">
+
+               <div class="linkZemin" >
+               <a href="@Url.Action("Create", "IcerikBaslik")" class="button" >İçerik Başlıkları Ekle</a>
+               </div>
+
+				<table class="tblList" >
+    <tr class="HeaderStyle">
+        <th style="width:320px">Sayfa Başlıkları </th>
+        <th style="width:350px">Sayfa İçerik Düzenle</th>
+        <th style="width:100px">Sira</th>
+        <th style="width:70px">Dil</th>
+        <th style="width:70px">Link Alanı</th>
+        <th style="width:50px"> </th>
+        <th style="width:50px"> </th>
+        <th style="width:50px"> </th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr class="RowStyle" @AlternateBackground("#f3f3f3") >
+        <td>
+           @BusinessLayer.KategoriServis.Cizgi(item.Serial)  @item.KategoriAdi
+        </td>
+        <td>
+            @{
+    object prm = new { BaslikId = item.Id, dil = Request.QueryString["dil"].ToString() };
+             if (item.IcBaslik == null)
+                {
+                    @Html.ActionLink("Sayfa içerigi oluştur", "Create", "Icerik",prm , new {Class="hayir" });
+                }
+                else
+                {
+                    @Html.ActionLink( item.IcBaslik, "Edit", "Icerik", prm, new { Class = "evet" }); 
+                }  
+             }
+        </td>
+        <td>
+            @Html.TextBox("Sira", item.Sira,
+         new { onblur = "IcerikSirala(" + item.Id + ", this.value);", Class = "text", style = "width:70px;" })
+        </td>
+        <td>
+            @Content.DilIcon(Url, Request.QueryString["dil"].ToString())
+        </td>
+        <td>
+            @item.GosterimAlani
+        </td>
+         <td>
+            @Html.UpdateLink("IcerikBaslik", "Edit", new { id = item.Id}) 
+        </td>
+        <td>
+            @Html.DurumLink("IcerikBaslik", "Durum",
+            new { serial = item.Serial, durum=item.Durum, dil=sayfaDil }, item.Durum) 
+        </td>
+        <td>
+           <a href="@Url.Action("Delete", "IcerikBaslik", new { serial=item.Serial, dil=sayfaDil })" 
+           class="delete" > </a>
+        </td>
+    </tr>
+}
+
+</table>
+
+
+				</div> <!-- End #tab1 -->
+		  </div> <!-- End .content-box-content -->
+				
+ </div>

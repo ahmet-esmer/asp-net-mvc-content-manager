@@ -1,0 +1,83 @@
+﻿
+@model ModelLayer.Icerik
+           
+@using ModelLayer.ModelView;
+
+@{
+   List<UrunLinkModel> UrunLink = ViewBag.UrunLink as List<UrunLinkModel>;
+
+   ViewBag.Title = Model.Title;
+   ViewBag.Description = Model.Description;
+   ViewBag.Keywords = Model.Keywords;
+}
+
+    <div id="banner"> 
+      @{ Html.RenderAction("Banner", "Include");  }  
+    </div>
+
+   <div id="mesajlar" class="mesajlar"  >
+       @{Html.RenderPartial("Mesajlar");}
+   </div>
+
+    <div class="line icerikSol" > 
+        <h1>@Resources.Strings.lblHosgeldin</h1>
+        <span class="title-1" > @Resources.Strings.lblSlogan</span>
+        <div id="anaIcerik" >
+        @Html.Raw(Model.SayfaIcerik)
+        </div>
+    </div>
+    <div class="line icerikSag" > 
+        <div id="arama" >
+        <span class="title-2" >@Resources.Strings.lblArama</span>
+        <input type="hidden"  id="clientPath" value="@Href("~/" + Url.RequestContext.RouteData.Values["culture"].ToString())" />
+                    
+            <div class="line search-1" >
+                <input id="txtSearch" type="text" />
+            </div>
+            <div class="line search-2" >
+                <img id="imgSearch" src="@Href("~/Content/Images/search.jpg")"  />
+            </div>
+        </div>
+        @{
+            Html.RenderAction("Announcement", "Include");
+            }
+        </div>
+    <div class="clear"> </div>
+    <div class="line altBlok">
+    <div class="img"><img src="@Url.Content("~/Content/Products/Sayfa/1.jpg")" alt="Ürünler" /></div>   
+    <div class="altBlokBaslik" >@Resources.Strings.AnaAltTitile1</div>
+    <div class="altBlokIcerik"> 
+        <ul id="urunList">
+        @foreach (var urun in UrunLink)
+        {
+            if (urun.Serial.Length != 3)
+            {
+                <li>
+                <span>@Html.Raw(BusinessLayer.KategoriServis.UrunTree(urun.Serial, urun.UrunLink)) </span>
+                <a href="@Href(urun.Link)" >@urun.IcBaslik</a>
+                </li>
+            }
+        }
+        </ul>
+    </div>
+
+    <div class="devam" ><a href='@Href("~/" + Model.Dil + "/Urunler")'>@Resources.Strings.Devam</a></div>
+    </div>
+    <div class="line altBlok" style="margin:0 25px 5px 25px;">
+    <div class="img" ><img src="@Url.Content("~/Content/Products/Sayfa/2.jpg")" alt="Ürünler" /></div>
+    <div class="altBlokBaslik" >@Resources.Strings.AnaAltTitile2</div>
+    <div class="altBlokIcerik"> 
+        <p> @Resources.Strings.AnaAltConten2 </p>
+        </div>
+        <div class="devam">&nbsp;@*<a href="#">@Resources.Strings.Devam</a>*@</div>
+    </div>
+    <div class="line altBlok" >
+    <div class="img"><img src="@Url.Content("~/Content/Products/Sayfa/3.jpg")" alt="Ürünler" /></div> 
+    <div class="altBlokBaslik" >@Resources.Strings.AnaAltTitile3</div>
+    <div class="altBlokIcerik"> 
+    <p> @Resources.Strings.AnaAltConten3 </p>
+    </div>
+    <div class="devam">&nbsp;@*<a href="#">@Resources.Strings.Devam</a>*@</div>
+    </div>
+    <div class="clear"> </div>
+

@@ -1,0 +1,7 @@
+D:\Projeler\MicroOptik\Library\MailLibrary\bin\Release\MailLibrary.dll
+D:\Projeler\MicroOptik\Library\MailLibrary\bin\Release\MailLibrary.pdb
+D:\Projeler\MicroOptik\Library\MailLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\MailLibrary\obj\Release\MailLibrary.dll
+D:\Projeler\MicroOptik\Library\MailLibrary\obj\Release\MailLibrary.pdb
+D:\Projeler\MicroOptik\Library\MailLibrary\bin\Release\ConfigLibrary.dll
+D:\Projeler\MicroOptik\Library\MailLibrary\bin\Release\ConfigLibrary.pdb

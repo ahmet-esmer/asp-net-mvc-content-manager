@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ModelLayer.Duyuru>
+
+@{
+    ViewBag.Title = Resources.Strings.lblHaber;
+}
+
+
+@section Head{
+   <script type="text/javascript" language="javascript" >
+       $(document).ready(function () {
+
+           var go = getQuerystring('Id');
+           if (go != null) {
+
+               $("#" + go).slideto({ highlight_color: '#f11f2a', highlight_duration: 3000 });
+           }
+       });
+      </script>
+}
+
+ <div id="banner"> 
+      @{ Html.RenderAction("Banner", "Include");  }  
+  </div>
+
+  <div id="mesajlar" class="mesajlar"  >
+       @{Html.RenderPartial("Mesajlar");}
+  </div>
+
+<h1>@Resources.Strings.lblHaber </h1>
+<div class="bannerLine"> </div>
+<div id="duyuruIc" >
+
+@foreach (var item in Model)
+{
+    <div id="@item.Id" class="title-4" >
+         @item.Baslik
+    </div>
+    <div class="title-2">
+       @BusinessLayer.DateFormat.TarihGun(item.Tarih)
+    </div>
+    <div class="dIcerik" >
+        @Html.Raw(item.Icerik)
+    </div>
+}
+
+</div>

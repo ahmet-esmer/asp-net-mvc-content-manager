@@ -1,0 +1,5 @@
+D:\Projeler\MicroOptik\Library\HttpSecureCookie\bin\Debug\SecureCookie.dll
+D:\Projeler\MicroOptik\Library\HttpSecureCookie\bin\Debug\SecureCookie.pdb
+D:\Projeler\MicroOptik\Library\HttpSecureCookie\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\HttpSecureCookie\obj\Debug\SecureCookie.dll
+D:\Projeler\MicroOptik\Library\HttpSecureCookie\obj\Debug\SecureCookie.pdb

@@ -1,0 +1,34 @@
+﻿@model ModelLayer.Icerik
+
+
+  <div id="banner"> 
+      @{ Html.RenderAction("Banner", "Include");  }  
+  </div>
+  <div id="mesajlar" class="mesajlar"  >
+      @{Html.RenderPartial("Mesajlar");}
+  </div>
+  <span class="title-1" >@Model.IcBaslik</span>
+  <div class="bannerLine"> </div>
+   <div class="line icerikSol" > 
+        <div id="anaIcerik" >
+          <p>@Html.Raw(Model.SayfaIcerik)</p>
+        </div>
+    </div>
+    <div class="line icerikSag" > 
+        <div id="arama" >
+                <span class="title-2" >@Resources.Strings.lblArama</span>
+
+                <input type="hidden"  id="clientPath"
+                    value="@Href("~/" + Url.RequestContext.RouteData.Values["culture"].ToString())" />
+                    
+                <div class="line search-1" >
+                    <input id="txtSearch" type="text" />
+                </div>
+                <div class="line search-2" >
+                    <img id="imgSearch" src="@Href("~/Content/Images/search.jpg")"   />
+                </div>
+        </div>
+
+        @{ Html.RenderAction("Announcement", "Include");   }
+    </div>
+   <div class="clear"> </div>

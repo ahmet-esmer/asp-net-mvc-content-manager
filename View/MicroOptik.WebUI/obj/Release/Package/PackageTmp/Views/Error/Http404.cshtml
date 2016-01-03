@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Http404";
+}
+
+
+  <div id="banner"> 
+      @{ Html.RenderAction("Banner", "Include");  }  
+  </div>
+
+  <div id="mesajlar" class="mesajlar"  >
+      @{Html.RenderPartial("Mesajlar");}
+  </div>
+

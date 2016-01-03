@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+
+@using MicroOptik.WebUI.Content.HtmlHelpers;
+
+<html>
+<head>
+     <!--  CSS -->
+    @Content.StyleAdmin("Reset.css", Url)
+    @Content.StyleAdmin("Admin.css", Url)
+
+    <!-- JavaScript -->
+    @Content.Script("jquery-1.4.4.min.js",Url)
+    @Content.Script("ui.core.js", Url)
+    @Content.Script("ui.progressbar.js", Url)
+
+    @Content.Script("jquery.validate.min.js", Url)
+    @Content.Script("jquery.validate.unobtrusive.min.js", Url)
+
+    @Content.Script("jquery.unobtrusive-ajax.js", Url)
+    @Content.Script("simpla.jquery.configuration.js",Url)
+    @Content.Script("facebox.js",Url)
+    @RenderSection("scripts", false)
+
+
+    <!--[if IE ]> 
+     <link rel="stylesheet" href="@Url.Content("~/Areas/Admin/Content/Style/ieStyle.css")s" type="text/css" media="screen"/>
+    <![endif]-->
+      
+    <script type="text/javascript" language="javascript" >
+
+       function silKontrol() {
+                    return confirm("Bu Kaydı Silmek İstiyormusunuz!");
+                }
+   </script>
+</head>
+<body>
+   
+      <div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
+		<div id="sidebar">
+        <div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
+			<a href="#">
+            <img id="logo" src="@Url.Content("~/Areas/Admin/Content/images/logo.jpg")" alt="Admin Logo" />
+            </a>
+			<!-- Sidebar Profile links -->
+			<div id="profile-links">
+            @if (@ViewData["Admin"] != null)
+	        {
+		       <label> Hoşgeldiniz   @ViewData["Admin"].ToString() </label>  
+	        }
+				
+		    <br />
+				<a href="@Url.Content("~/")" target="_blank" title="Anasayfa">Siteyi Görüntüle</a>
+                @Html.ActionLink("Çıkış", "Cikis", "Login")
+			</div>        
+			<ul id="main-nav">  <!-- Accordion Menu -->
+				<li><!-- Add the class "no-submenu" to menu items with no sub menu -->
+					<a href="@Url.Action("Index", "Arayuz")" class="nav-top-item no-submenu" > Anasayfa </a>       
+				</li>
+				<li> <!-- Add the class "current" to current menu item -->
+					<a class="nav-top-item" href="#" > İçerik Yonetimi </a>
+					<ul>
+                        <li><a href="@Url.Action("Create", "IcerikBaslik")">Yeni Sayfa Oluştur</a></li>
+                        <li><a href="@Url.Action("Index", "IcerikBaslik", new {dil="tr" })">Sayfalar</a></li>
+						<li><a href="@Url.Action("Index","Banner")" >Bannerlar</a></li> 
+					</ul>
+				</li>
+				<li>
+                  <a href='@Url.Action("Duyurular", "Duyuru")'  class="nav-top-item no-submenu" >Duyurular</a>
+				</li>
+                <li> 
+					<a class="nav-top-item" href="#"> Kulanıcılar </a>
+					<ul >
+                         <li>
+                         @Ajax.ActionLink("Yöneticiler", "Index", "Kullanici", 
+                            new AjaxOptions { 
+                                UpdateTargetId = "icerik",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "progress"
+                            })
+                         </li>
+                        @*<li><a href="mailListesi.aspx">Mail Listesi</a></li>*@
+					</ul>
+				</li>
+				<li>
+					<a class="nav-top-item" href="#" > Ayarlar </a>
+					<ul>
+                        <li><a href='@Url.Action("Index","SiteDil")' >Site Dilleri</a></li>
+                        <li>
+                        @Ajax.ActionLink("Genel Ayarlar","SiteIletisim", "Ayarlar", 
+                            new AjaxOptions { 
+                                UpdateTargetId = "icerik",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "progress"
+                            })
+                        </li>
+                            <li>
+                        @Ajax.ActionLink("Mail Bilgileri", "MailSMTPClint", "Ayarlar", 
+                            new AjaxOptions { 
+                                UpdateTargetId = "icerik",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "GET",
+                                LoadingElementId = "progress"
+                            })
+                        </li>
+                        <li>
+                        
+                        @Ajax.ActionLink("Hata Mesajları", "HataMesajlari", "Hatalar",
+                        new AjaxOptions { 
+                            UpdateTargetId = "icerik",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            LoadingElementId = "progress"
+                        })
+
+                        </li>
+					</ul>
+				</li>      
+			</ul>
+            <!-- End #main-nav -->	
+		</div>
+        </div> <!-- End #sidebar -->
+		<!-- Main Content Section with everything -->
+		<div id="main-content"> 
+			<ul class="shortcut-buttons-set">
+				<li><a class="shortcut-button" href="#"><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/urunler.png")" alt="Ürünler"  /><br />
+					Ürünler
+				</span></a></li>
+            @*    <li><a class="shortcut-button" href="siparisler.aspx"><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/sepet.png")" alt="Siparişler" /><br />
+					Siparişler
+				</span></a></li>*@
+				<li><a class="shortcut-button" href="@Url.Action("Index", "IcerikBaslik", new {dil="tr" })" ><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/paper_content_pencil_48.png")" alt="Sayfalar" /><br />
+					Sayfalar
+				</span></a></li>
+				<li><a class="shortcut-button" href="@Url.Action("Duyurular", "Duyuru")"><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/duyuru.png")" alt="Duyurular" /><br />
+					Duyurular
+				</span></a></li>
+				<li>
+                 @Ajax.ActionImageLink(Url.Content("~/Areas/Admin/Content/images/anaIcon/user.png"),
+                          "Kullanıcılar", "Index", "Kullanici", "null", new AjaxOptions
+                          { 
+                               UpdateTargetId = "icerik",
+                               InsertionMode = InsertionMode.Replace,
+                               HttpMethod = "GET",
+                               LoadingElementId = "progress"
+                          })
+
+                </li>
+              @*  <li><a class="shortcut-button" href="anketler.aspx"  ><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/anket.png")" alt="Anketler" /><br />
+					Anketler
+				</span></a></li>*@
+                <li><a class="shortcut-button" href="@Url.Action("Index","SiteDil")"><span>
+					<img src="@Url.Content("~/Areas/Admin/Content/images/anaIcon/ayarlar.png")" alt="Ayarlar" /><br />
+					Ayarlar
+				</span></a></li>
+				
+			</ul><!-- End .shortcut-buttons-set -->
+			<div class="clear"></div> <!-- End .clear -->
+            
+          <div id="mesajlar" class="mesajlar"  >
+            @{Html.RenderPartial("Mesajlar");}
+          </div>
+          <div style="height:20px;" > 
+           <div id="progress"  class="progress" >  </div>
+          </div>
+         
+
+            <div id="icerik" >
+                
+    <!-- Admin Sayfa İçerikleri-->
+            @RenderBody()
+             </div>
+			<div id="footer">
+				<small>
+                 Ahmet Esmer © Copyright 2011
+				</small>
+			</div><!-- End #footer -->
+		</div> <!-- End #main-content -->
+	</div>
+
+   <script type="text/javascript" language="javascript" >
+
+       function tabAc() {
+           $('#link1').removeClass('default-tab current');
+           $('#link1').removeClass('current');
+           $('#link2').addClass('default-tab current');
+
+           $('#tab1').removeClass('tab-content default-tab');
+           $('#tab1').css("display", "none");
+           $('#tab1').addClass('tab - content');
+
+           $('#tab2').removeClass('tab - content');
+           $('#tab2').addClass('tab-content default-tab');
+
+           //$('#link2').text("Duyuru Düzenle");
+       }
+
+   </script>
+
+
+</body>
+</html>

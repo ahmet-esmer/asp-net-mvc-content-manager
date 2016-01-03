@@ -1,0 +1,51 @@
+﻿@model  IEnumerable<ModelLayer.ModelView.UrunListeModel>
+
+
+@using ModelLayer.ModelView
+@using BusinessLayer;
+
+@{
+
+  List<UrunLinkModel> katLink = ViewBag.KategoriLink as List<UrunLinkModel>;
+}
+
+      <div id="mesajlar" class="mesajlar" >
+          @{Html.RenderPartial("Mesajlar");}
+      </div>
+       <span class="title-1" >@ViewBag.Title</span>
+        <div class="bannerLine"> </div>
+        <div class="line urunler-1" >
+          @foreach (var kat in katLink)
+          {
+             <ul class="urunList">
+                <li>
+                 <span> @Html.Raw(BusinessLayer.KategoriServis.UrunTree(kat.Serial, kat.UrunLink))  </span>
+                 <a href="@Href(kat.Link)" >  @kat.IcBaslik</a>
+                </li>
+             </ul>
+           }
+        </div>
+        <div class="line urunler-2">
+        
+    <div class="productTitile" ><h5>@Html.Raw(ViewBag.Mesaj)</h5></div>
+    @{
+   
+    foreach (var urun in Model)
+    {
+   
+     string link = @Href(LinkBuldingServis.UrunDetay(urun.IcBaslik, Url.RequestContext.RouteData.Values["culture"].ToString(), urun.IcerikId));
+        
+    <div class="listDiv">    
+        <div align="center" >
+         <a href="@link"><img src="@Href("~/Content/Products/Small/"+ @urun.ResimAdi)" /></a>
+        </div>       
+         <a class="productLink" href="@link">@urun.IcBaslik</a> 
+    </div>
+    } 
+   }
+        <div class="clear"></div>
+        <div class="pagination">
+         @Html.Raw(ViewBag.Paging)
+        </div> 
+       </div>
+       <div class="clear" >  </div>

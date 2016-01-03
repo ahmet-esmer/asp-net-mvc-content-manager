@@ -1,0 +1,12 @@
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\RepositoryLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\RepositoryLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\ModelLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\DataAnnotationsExtensions.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\ModelLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\obj\Debug\RepositoryLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\obj\Debug\RepositoryLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\BusinessLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\BusinessLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\ConfigLibrary.dll
+D:\Projeler\MicroOptik\ApplicationServer\RepositoryLayer\bin\Debug\ConfigLibrary.pdb

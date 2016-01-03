@@ -1,0 +1,15 @@
+F:\ASP_NET\JUStore\ConvertLibrary\bin\Debug\ConvertLibrary.dll
+F:\ASP_NET\JUStore\ConvertLibrary\bin\Debug\ConvertLibrary.pdb
+F:\ASP_NET\JUStore\ConvertLibrary\obj\Debug\ResolveAssemblyReference.cache
+F:\ASP_NET\JUStore\ConvertLibrary\obj\Debug\ConvertLibrary.dll
+F:\ASP_NET\JUStore\ConvertLibrary\obj\Debug\ConvertLibrary.pdb
+D:\Projeler\MicroOptik\ConvertLibrary\bin\Debug\ConvertLibrary.dll
+D:\Projeler\MicroOptik\ConvertLibrary\bin\Debug\ConvertLibrary.pdb
+D:\Projeler\MicroOptik\ConvertLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\ConvertLibrary\obj\Debug\ConvertLibrary.dll
+D:\Projeler\MicroOptik\ConvertLibrary\obj\Debug\ConvertLibrary.pdb
+D:\Projeler\MicroOptik\Library\ConvertLibrary\bin\Debug\ConvertLibrary.dll
+D:\Projeler\MicroOptik\Library\ConvertLibrary\bin\Debug\ConvertLibrary.pdb
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Debug\ConvertLibrary.dll
+D:\Projeler\MicroOptik\Library\ConvertLibrary\obj\Debug\ConvertLibrary.pdb

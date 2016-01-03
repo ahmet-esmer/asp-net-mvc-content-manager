@@ -1,0 +1,11 @@
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\GlobalErrorHandler.dll
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\GlobalErrorHandler.pdb
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\BusinessLayer.dll
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\BusinessLayer.pdb
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\obj\Release\GlobalErrorHandler.dll
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\obj\Release\GlobalErrorHandler.pdb
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\LoggerLibrary.dll
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\ConfigLibrary.dll
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\LoggerLibrary.pdb
+D:\Projeler\MicroOptik\Library\GlobalErrorHandler\bin\Release\ConfigLibrary.pdb

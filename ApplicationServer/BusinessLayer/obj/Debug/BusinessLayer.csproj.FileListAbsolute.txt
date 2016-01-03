@@ -1,0 +1,15 @@
+F:\ASP_NET\JUStore\BusinessLayer\bin\Debug\BusinessLayer.dll
+F:\ASP_NET\JUStore\BusinessLayer\bin\Debug\BusinessLayer.pdb
+F:\ASP_NET\JUStore\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\ASP_NET\JUStore\BusinessLayer\obj\Debug\BusinessLayer.dll
+F:\ASP_NET\JUStore\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\Projeler\MicroOptik\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Projeler\MicroOptik\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Projeler\MicroOptik\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Projeler\MicroOptik\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Projeler\MicroOptik\ApplicationServer\BusinessLayer\obj\Debug\BusinessLayer.pdb

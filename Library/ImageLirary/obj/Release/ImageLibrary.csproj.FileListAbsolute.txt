@@ -1,0 +1,5 @@
+D:\Projeler\MicroOptik\Library\ImageLirary\bin\Release\ImageLibrary.dll
+D:\Projeler\MicroOptik\Library\ImageLirary\bin\Release\ImageLibrary.pdb
+D:\Projeler\MicroOptik\Library\ImageLirary\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Library\ImageLirary\obj\Release\ImageLibrary.dll
+D:\Projeler\MicroOptik\Library\ImageLirary\obj\Release\ImageLibrary.pdb

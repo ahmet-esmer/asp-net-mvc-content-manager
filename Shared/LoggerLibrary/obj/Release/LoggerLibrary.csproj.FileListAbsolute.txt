@@ -1,0 +1,14 @@
+D:\Projeler\LensOptik\Shared\LoggerLibrary\bin\Release\LoggerLibrary.dll
+D:\Projeler\LensOptik\Shared\LoggerLibrary\bin\Release\LoggerLibrary.pdb
+D:\Projeler\LensOptik\Shared\LoggerLibrary\bin\Release\ConfigLibrary.dll
+D:\Projeler\LensOptik\Shared\LoggerLibrary\bin\Release\ConfigLibrary.pdb
+D:\Projeler\LensOptik\Shared\LoggerLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\LensOptik\Shared\LoggerLibrary\obj\Release\LoggerLibrary.dll
+D:\Projeler\LensOptik\Shared\LoggerLibrary\obj\Release\LoggerLibrary.pdb
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\bin\Release\LoggerLibrary.dll
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\bin\Release\LoggerLibrary.pdb
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\bin\Release\ConfigLibrary.dll
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\bin\Release\ConfigLibrary.pdb
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\obj\Release\LoggerLibrary.dll
+D:\Projeler\MicroOptik\Shared\LoggerLibrary\obj\Release\LoggerLibrary.pdb

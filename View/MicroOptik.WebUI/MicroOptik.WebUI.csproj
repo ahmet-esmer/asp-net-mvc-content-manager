@@ -1,0 +1,1428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D3D7A21-BB1B-4E90-A98D-E4C5497D0F41}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MicroOptik.WebUI</RootNamespace>
+    <AssemblyName>MicroOptik.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ReferencedDlls\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ReferencedDlls\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ReferencedDlls\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\ContactForm.en.designer.cs">
+      <DependentUpon>ContactForm.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\ContactForm.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Strings.designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Strings.en.designer.cs">
+      <DependentUpon>Strings.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArayuzController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Infrastructure\Authorization\AdminAuthorization.cs" />
+    <Compile Include="Areas\Admin\Controllers\AyarlarController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
+    <Compile Include="Infrastructure\BasePages\BaseAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DuyuruController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HatalarController.cs" />
+    <Compile Include="Areas\Admin\Controllers\IcerikBaslikController.cs" />
+    <Compile Include="Areas\Admin\Controllers\IcerikController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KullaniciController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SiteDilController.cs" />
+    <Compile Include="Content\HtmlHelpers\AjaxMesaj.cs" />
+    <Compile Include="Content\HtmlHelpers\DuzenleExtension.cs" />
+    <Compile Include="Content\HtmlHelpers\DurumExtension.cs" />
+    <Compile Include="Content\HtmlHelpers\ImageActionLinkHelper.cs" />
+    <Compile Include="Content\HtmlHelpers\ImageHelper.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\IncludeController.cs" />
+    <Compile Include="Infrastructure\Attribute\LocalizedDisplayName.cs" />
+    <Compile Include="Infrastructure\BasePages\BaseSiteController.cs" />
+    <Compile Include="Infrastructure\Captcha.ashx.cs">
+      <DependentUpon>Captcha.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Infrastructure\Paging.cs" />
+    <Compile Include="Infrastructure\SiteCulture\Culture.cs" />
+    <Compile Include="Infrastructure\SiteCulture\CultureConstraint.cs" />
+    <Compile Include="Infrastructure\SiteCulture\MultiCultureMvcRouteHandler.cs" />
+    <Compile Include="Infrastructure\SiteCulture\SingleCultureMvcRouteHandler.cs" />
+    <Compile Include="Models\IletisimFormu.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Content\HtmlHelpers\PagingHelpers.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PagingInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\behaviors\disablehandles.htc" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\behaviors\showtableborders.htc" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\fck_editorarea.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\fck_internal.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_address.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_blockquote.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_div.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h1.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h2.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h3.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h4.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h5.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_h6.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_p.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\block_pre.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\fck_anchor.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\fck_flashlogo.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\fck_hiddenfield.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\fck_pagebreak.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\css\images\fck_plugin.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\common\fck_dialog_common.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\common\fck_dialog_common.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\common\images\locked.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\common\images\reset.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\common\images\unlocked.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_about.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_about\logo_fckeditor.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_about\logo_fredck.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_about\sponsors\spellchecker_net.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_anchor.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_button.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_checkbox.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_colorselector.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_div.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_docprops.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_docprops\fck_document_preview.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_flash.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_flash\fck_flash.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_flash\fck_flash_preview.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_form.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_hiddenfield.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_image.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_image\fck_image.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_image\fck_image_preview.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_link.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_link\fck_link.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_listprop.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_paste.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_radiobutton.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_replace.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_select.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_select\fck_select.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_smiley.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_source.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_specialchar.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\blank.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controls.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\controlWindow.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellchecker.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellChecker.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\spellerStyle.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\wordWindow.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_table.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_tablecell.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_template.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_template\images\template1.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_template\images\template2.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_template\images\template3.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_textarea.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_textfield.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dtd\fck_dtd_test.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dtd\fck_xhtml10strict.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\dtd\fck_xhtml10transitional.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\fckdebug.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\fckdialog.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\fckeditor.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\fckeditor.original.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\browser.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\browser.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmactualfolder.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmcreatefolder.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmfolders.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmresourceslist.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmresourcetype.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\frmupload.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\ButtonArrow.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\Folder.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\Folder32.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\FolderOpened.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\FolderOpened32.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\FolderUp.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\ai.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\avi.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\bmp.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\cs.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\default.icon.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\dll.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\doc.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\exe.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\fla.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\gif.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\htm.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\html.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\jpg.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\js.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\mdb.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\mp3.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\pdf.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\png.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\ppt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\rdp.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\swf.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\swt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\txt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\vsd.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\xls.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\xml.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\32\zip.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\ai.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\avi.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\bmp.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\cs.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\default.icon.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\dll.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\doc.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\exe.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\fla.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\gif.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\htm.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\html.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\jpg.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\js.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\mdb.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\mp3.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\pdf.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\png.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\ppt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\rdp.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\swf.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\swt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\txt.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\vsd.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\xls.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\xml.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\icons\zip.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\images\spacer.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\js\common.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\browser\default\js\fckxml.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\aspx\config.ascx" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\aspx\connector.aspx" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\aspx\upload.aspx" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\basexml.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\class_upload.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\commands.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\config.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\connector.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\io.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\upload.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\asp\util.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\htaccess.txt" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\test.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\uploadtest.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\anchor.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\arrow_ltr.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\arrow_rtl.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\angel_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\angry_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\broken_heart.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\cake.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\confused_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\cry_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\devil_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\embaressed_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\envelope.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\heart.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\kiss.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\lightbulb.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\omg_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\regular_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\sad_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\shades_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\teeth_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\thumbs_down.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\thumbs_up.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\tounge_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\whatchutalkingabout_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\smiley\msn\wink_smile.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\images\spacer.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\js\fckadobeair.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\js\fckeditorcode_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\js\fckeditorcode_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\af.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ar.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\bg.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\bn.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\bs.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ca.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\cs.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\da.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\de.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\el.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\en-au.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\en-ca.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\en-uk.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\en.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\eo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\es.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\et.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\eu.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\fa.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\fi.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\fo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\fr-ca.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\fr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\gl.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\gu.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\he.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\hi.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\hr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\hu.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\it.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ja.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\km.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\lt.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\lv.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\mn.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ms.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\nb.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\nl.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\no.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\pl.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\pt-br.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\pt.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ro.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\ru.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\sk.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\sl.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\sr-latn.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\sr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\sv.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\th.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\tr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\uk.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\vi.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\zh-cn.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\zh.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\lang\_translationstatus.txt" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\autogrow\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\bbcode\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\bbcode\_sample\sample.config.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\bbcode\_sample\sample.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\dragresizetable\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\fck_placeholder.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\de.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\en.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\es.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\fr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\it.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\lang\pl.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\simplecommands\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\plugins\tablecommands\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\fck_dialog.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\fck_dialog_ie6.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\fck_editor.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\fck_strip.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\dialog.sides.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\dialog.sides.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\dialog.sides.rtl.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\sprites.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\sprites.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.arrowright.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.buttonarrow.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.collapse.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.end.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.expand.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.separator.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\default\images\toolbar.start.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\fck_dialog.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\fck_dialog_ie6.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\fck_editor.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\fck_strip.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\dialog.sides.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\dialog.sides.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\dialog.sides.rtl.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\sprites.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\sprites.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.arrowright.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.bg.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.buttonarrow.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.collapse.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.end.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.expand.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.separator.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\office2003\images\toolbar.start.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\fck_dialog.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\fck_dialog_ie6.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\fck_editor.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\fck_strip.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\dialog.sides.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\dialog.sides.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\dialog.sides.rtl.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\sprites.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\sprites.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.arrowright.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.buttonarrow.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.buttonbg.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.collapse.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.end.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.expand.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.separator.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\silver\images\toolbar.start.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\skins\_fckviewstrips.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckcontextmenu.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdataprocessor.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdocumentfragment_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdocumentfragment_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdomrange.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdomrangeiterator.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdomrange_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckdomrange_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckeditingarea.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckelementpath.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckenterkey.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckevents.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckhtmliterator.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckicon.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckiecleanup.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckimagepreloader.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckkeystrokehandler.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckmenublock.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckmenublockpanel.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckmenuitem.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckpanel.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckspecialcombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckstyle.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbar.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarbreak_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarbreak_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarbutton.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarbuttonui.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarfontformatcombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarfontscombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarfontsizecombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarpanelbutton.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarspecialcombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fcktoolbarstylecombo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckw3crange.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckxml.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckxml_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\classes\fckxml_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckblockquotecommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckcorestylecommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckfitwindow.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckindentcommands.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckjustifycommands.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fcklistcommands.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fcknamedcommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckpasteplaintextcommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckpastewordcommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckremoveformatcommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckshowblocks.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckspellcheckcommand_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fckstylecommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fcktablecommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fcktextcolorcommand.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\commandclasses\fck_othercommands.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\fckconstants.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\fckeditorapi.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\fckjscoreextensions.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\fckscriptloader.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fck.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckbrowserinfo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckcodeformatter.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckcommands.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckconfig.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckdebug.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckdebug_empty.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckdialog.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckdocumentprocessor.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckdomtools.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcklanguagemanager.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcklisthandler.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcklistslib.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckplugins.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckregexlib.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckselection.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckselection_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckselection_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckstyles.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktablehandler.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktablehandler_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktablehandler_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktoolbaritems.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktoolbarset.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktools.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktools_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fcktools_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckundo.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckurlparams.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckxhtml.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckxhtmlentities.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckxhtml_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fckxhtml_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fck_contextmenu.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fck_gecko.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\editor\_source\internals\fck_ie.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\fckconfig.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\fckeditor.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\fckeditor.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\fckpackager.xml" />
+    <Content Include="Areas\Admin\Content\fckeditor\fckstyles.xml" />
+    <Content Include="Areas\Admin\Content\fckeditor\fcktemplates.xml" />
+    <Content Include="Areas\Admin\Content\fckeditor\license.txt" />
+    <Content Include="Areas\Admin\Content\fckeditor\_documentation.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\application.xml" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\icons\128.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\icons\16.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\icons\32.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\icons\48.png" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\adobeair\sample01.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\asp\sample01.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\asp\sample02.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\asp\sample03.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\asp\sample04.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\asp\sampleposteddata.asp" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\default.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample06.config.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample11_frame.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample14.config.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample14.styles.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample15.config.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample16.config.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample16.swf" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\assets\swfobject.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample01.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample02.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample03.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample04.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample05.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample06.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample07.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample08.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample09.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample10.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample11.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample12.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample13.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample14.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample15.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\html\sample16.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\sample.css" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\sampleslist.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\find.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\find.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\lang\en.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\lang\fr.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\lang\it.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\replace.gif" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\findreplace\replace.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_samples\_plugins\samples\fckplugin.js" />
+    <Content Include="Areas\Admin\Content\fckeditor\_upgrade.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_whatsnew.html" />
+    <Content Include="Areas\Admin\Content\fckeditor\_whatsnew_history.html" />
+    <Content Include="Areas\Admin\Content\images\aktiv.gif" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\anket.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\ayarlar.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\duyuru.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\image_add_48.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\paper_content_pencil_48.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\sepet.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\urunler.png" />
+    <Content Include="Areas\Admin\Content\images\anaIcon\user.png" />
+    <Content Include="Areas\Admin\Content\images\b.png" />
+    <Content Include="Areas\Admin\Content\images\bg-body.gif" />
+    <Content Include="Areas\Admin\Content\images\bg-form-field.gif" />
+    <Content Include="Areas\Admin\Content\images\bg-menu-item-blue.gif" />
+    <Content Include="Areas\Admin\Content\images\bg-menu-item-current.gif" />
+    <Content Include="Areas\Admin\Content\images\bg-radial-gradient.gif" />
+    <Content Include="Areas\Admin\Content\images\bl.png" />
+    <Content Include="Areas\Admin\Content\images\br.png" />
+    <Content Include="Areas\Admin\Content\images\buttonBg.gif" />
+    <Content Include="Areas\Admin\Content\images\closelabel.gif" />
+    <Content Include="Areas\Admin\Content\images\cross.png" />
+    <Content Include="Areas\Admin\Content\images\cross_grey_small.png" />
+    <Content Include="Areas\Admin\Content\images\downArrow.gif" />
+    <Content Include="Areas\Admin\Content\images\duzenle.gif" />
+    <Content Include="Areas\Admin\Content\images\ekleme.gif" />
+    <Content Include="Areas\Admin\Content\images\EmptyStar.png" />
+    <Content Include="Areas\Admin\Content\images\ePosta.gif" />
+    <Content Include="Areas\Admin\Content\images\FilledStar.png" />
+    <Content Include="Areas\Admin\Content\images\giris.gif" />
+    <Content Include="Areas\Admin\Content\images\hammer_screwdriver.png" />
+    <Content Include="Areas\Admin\Content\images\icons\cross_circle.png" />
+    <Content Include="Areas\Admin\Content\images\icons\exclamation.png" />
+    <Content Include="Areas\Admin\Content\images\icons\information.png" />
+    <Content Include="Areas\Admin\Content\images\icons\tick_circle.png" />
+    <Content Include="Areas\Admin\Content\images\info_no.jpg" />
+    <Content Include="Areas\Admin\Content\images\kaydet.gif" />
+    <Content Include="Areas\Admin\Content\images\loader.gif" />
+    <Content Include="Areas\Admin\Content\images\loading.gif" />
+    <Content Include="Areas\Admin\Content\images\loginBg.jpg" />
+    <Content Include="Areas\Admin\Content\images\logo.jpg" />
+    <Content Include="Areas\Admin\Content\images\mavi.jpg" />
+    <Content Include="Areas\Admin\Content\images\menu-current-arrow.gif" />
+    <Content Include="Areas\Admin\Content\images\menuOk.jpg" />
+    <Content Include="Areas\Admin\Content\images\mesaj_info.jpg" />
+    <Content Include="Areas\Admin\Content\images\mesaj_no.jpg" />
+    <Content Include="Areas\Admin\Content\images\mesaj_ok.jpg" />
+    <Content Include="Areas\Admin\Content\images\mesaj_sis.jpg" />
+    <Content Include="Areas\Admin\Content\images\no.jpg" />
+    <Content Include="Areas\Admin\Content\images\ok.gif" />
+    <Content Include="Areas\Admin\Content\images\pageBg.gif" />
+    <Content Include="Areas\Admin\Content\images\pasif.gif" />
+    <Content Include="Areas\Admin\Content\images\pencil.png" />
+    <Content Include="Areas\Admin\Content\images\resimSil.gif" />
+    <Content Include="Areas\Admin\Content\images\safari.gif" />
+    <Content Include="Areas\Admin\Content\images\safari_bg.gif" />
+    <Content Include="Areas\Admin\Content\images\shortcut-button-bg.gif" />
+    <Content Include="Areas\Admin\Content\images\sil.gif" />
+    <Content Include="Areas\Admin\Content\images\sil_2.gif" />
+    <Content Include="Areas\Admin\Content\images\sis_no.gif" />
+    <Content Include="Areas\Admin\Content\images\solPanelBg.jpg" />
+    <Content Include="Areas\Admin\Content\images\tabUstBg.gif" />
+    <Content Include="Areas\Admin\Content\images\tl.png" />
+    <Content Include="Areas\Admin\Content\images\tr.png" />
+    <Content Include="Areas\Admin\Content\images\upArrow.gif" />
+    <Content Include="Areas\Admin\Content\images\x.jpg" />
+    <Content Include="Areas\Admin\Content\images\yes_no.gif" />
+    <Content Include="Areas\Admin\Content\img\progress.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_bg.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_bg_large.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_bg_lightblue.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_green.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_lightblue.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_orange.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_orange_large.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_red.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_solidblue.gif" />
+    <Content Include="Areas\Admin\Content\img\progress_yellow.gif" />
+    <Content Include="Areas\Admin\Content\img\safari.gif" />
+    <Content Include="Areas\Admin\Content\img\safari_bg.gif" />
+    <Content Include="Areas\Admin\Content\img\vista.gif" />
+    <Content Include="Areas\Admin\Content\img\vista_bg.gif" />
+    <Content Include="Areas\Admin\Content\img\xp.gif" />
+    <Content Include="Content\Images\beachflag.png" />
+    <Content Include="Content\Images\bg_trans.png" />
+    <Content Include="Content\Images\b_next.png" />
+    <Content Include="Content\Images\b_prev.png" />
+    <Content Include="Content\Images\icons\arrow_up.png" />
+    <Content Include="Content\Images\icons\cross_circle.png" />
+    <Content Include="Content\Images\icons\exclamation.png" />
+    <Content Include="Content\Images\icons\information.png" />
+    <Content Include="Content\Images\icons\tick_circle.png" />
+    <Content Include="Content\Images\lightbox-blank.gif" />
+    <Content Include="Content\Images\lightbox-btn-close.gif" />
+    <Content Include="Content\Images\lightbox-btn-next.gif" />
+    <Content Include="Content\Images\lightbox-btn-prev.gif" />
+    <Content Include="Content\Images\lightbox-ico-loading.gif" />
+    <Content Include="Content\Images\load-indicator.gif" />
+    <Content Include="Content\Images\mainBG.jpg" />
+    <Content Include="Content\Images\MikroOptikLogo.jpg" />
+    <Content Include="Content\Images\search.gif" />
+    <Content Include="Content\Images\search.jpg" />
+    <Content Include="Content\Images\Slices\bg-form-field.gif" />
+    <Content Include="Content\Products\Big\100989838404012012101031.jpg" />
+    <Content Include="Content\Products\Big\102987917222122011161425.jpg" />
+    <Content Include="Content\Products\Big\10527459922122011144455.jpg" />
+    <Content Include="Content\Products\Big\106102894822122011144154.jpg" />
+    <Content Include="Content\Products\Big\106781459522122011135112.jpg" />
+    <Content Include="Content\Products\Big\106820014522122011140738.jpg" />
+    <Content Include="Content\Products\Big\10898875715112011163150.jpg" />
+    <Content Include="Content\Products\Big\109305068222122011141127.jpg" />
+    <Content Include="Content\Products\Big\110830823022122011135901.jpg" />
+    <Content Include="Content\Products\Big\111530147022122011144537.jpg" />
+    <Content Include="Content\Products\Big\111709943022122011141627.jpg" />
+    <Content Include="Content\Products\Big\112247266722122011141121.jpg" />
+    <Content Include="Content\Products\Big\112676776122122011143854.jpg" />
+    <Content Include="Content\Products\Big\113703169614112011163358.jpg" />
+    <Content Include="Content\Products\Big\116375171504012012104438.jpg" />
+    <Content Include="Content\Products\Big\118815181004012012153237.jpg" />
+    <Content Include="Content\Products\Big\119429614722122011161349.jpg" />
+    <Content Include="Content\Products\Big\120875190622122011160234.jpg" />
+    <Content Include="Content\Products\Big\121166949722122011142511.jpg" />
+    <Content Include="Content\Products\Big\121219146722122011162208.jpg" />
+    <Content Include="Content\Products\Big\121341195604012012152940.jpg" />
+    <Content Include="Content\Products\Big\12399405922122011135915.jpg" />
+    <Content Include="Content\Products\Big\12802852022122011141620.jpg" />
+    <Content Include="Content\Products\Big\1282520722122011144523.jpg" />
+    <Content Include="Content\Products\Big\133653280322122011135951.jpg" />
+    <Content Include="Content\Products\Big\135612663322122011162151.jpg" />
+    <Content Include="Content\Products\Big\136733646022122011161402.jpg" />
+    <Content Include="Content\Products\Big\140934682822122011143847.png" />
+    <Content Include="Content\Products\Big\141830513722122011160240.jpg" />
+    <Content Include="Content\Products\Big\144058104902112011120147.jpg" />
+    <Content Include="Content\Products\Big\148086989504012012172230.jpg" />
+    <Content Include="Content\Products\Big\151125103214112011150924.jpg" />
+    <Content Include="Content\Products\Big\152928106415112011163206.jpg" />
+    <Content Include="Content\Products\Big\154886022604012012154747.jpg" />
+    <Content Include="Content\Products\Big\155608446322122011140005.jpg" />
+    <Content Include="Content\Products\Big\157683353522122011135922.jpg" />
+    <Content Include="Content\Products\Big\159768833804012012155947.jpg" />
+    <Content Include="Content\Products\Big\160516482115112011163213.jpg" />
+    <Content Include="Content\Products\Big\160531555422122011141611.jpg" />
+    <Content Include="Content\Products\Big\16183736604012012153037.jpg" />
+    <Content Include="Content\Products\Big\165397826522122011135120.jpg" />
+    <Content Include="Content\Products\Big\165634214404012012140954.jpg" />
+    <Content Include="Content\Products\Big\166567937322122011161431.jpg" />
+    <Content Include="Content\Products\Big\167594436122122011143814.jpg" />
+    <Content Include="Content\Products\Big\168317764004012012141826.jpg" />
+    <Content Include="Content\Products\Big\168336710022122011144531.jpg" />
+    <Content Include="Content\Products\Big\169139449702112011174129.jpg" />
+    <Content Include="Content\Products\Big\174315837014112011155238.jpg" />
+    <Content Include="Content\Products\Big\176496499122122011141643.jpg" />
+    <Content Include="Content\Products\Big\176822418322122011135133.jpg" />
+    <Content Include="Content\Products\Big\177842181804012012172240.jpg" />
+    <Content Include="Content\Products\Big\178966655222122011143746.jpg" />
+    <Content Include="Content\Products\Big\180789021322122011162000.jpg" />
+    <Content Include="Content\Products\Big\181373378204012012104443.jpg" />
+    <Content Include="Content\Products\Big\183249267322122011141537.jpg" />
+    <Content Include="Content\Products\Big\190301645322122011135908.jpg" />
+    <Content Include="Content\Products\Big\192061452522122011161755.jpg" />
+    <Content Include="Content\Products\Big\196383282604012012154755.jpg" />
+    <Content Include="Content\Products\Big\196801139022122011141550.jpg" />
+    <Content Include="Content\Products\Big\197171891804012012155735.jpg" />
+    <Content Include="Content\Products\Big\198317124522122011145000.jpg" />
+    <Content Include="Content\Products\Big\201208939322122011141637.jpg" />
+    <Content Include="Content\Products\Big\20428039822122011144515.jpg" />
+    <Content Include="Content\Products\Big\204306020814112011151030.jpg" />
+    <Content Include="Content\Products\Big\207649676404012012154732.jpg" />
+    <Content Include="Content\Products\Big\211479855122122011160246.jpg" />
+    <Content Include="Content\Products\Big\211817286522122011143839.jpg" />
+    <Content Include="Content\Products\Big\212143763404012012172128.jpg" />
+    <Content Include="Content\Products\Big\212177119704012012153230.jpg" />
+    <Content Include="Content\Products\Big\212294040322122011143731.jpg" />
+    <Content Include="Content\Products\Big\213818052222122011143725.jpg" />
+    <Content Include="Content\Products\Big\22279121214112011155337.jpg" />
+    <Content Include="Content\Products\Big\23949848922122011141133.jpg" />
+    <Content Include="Content\Products\Big\25413813104012012103906.jpg" />
+    <Content Include="Content\Products\Big\26359922422122011162157.jpg" />
+    <Content Include="Content\Products\Big\26956665722122011143821.jpg" />
+    <Content Include="Content\Products\Big\27823223604012012130022.jpg" />
+    <Content Include="Content\Products\Big\28077964904012012153253.jpg" />
+    <Content Include="Content\Products\Big\30304440104012012172121.jpg" />
+    <Content Include="Content\Products\Big\30587755922122011162219.jpg" />
+    <Content Include="Content\Products\Big\32803833722122011135959.jpg" />
+    <Content Include="Content\Products\Big\3731008422122011140011.jpg" />
+    <Content Include="Content\Products\Big\38150660922122011142506.jpg" />
+    <Content Include="Content\Products\Big\39205177104012012172133.jpg" />
+    <Content Include="Content\Products\Big\40961528504012012172235.jpg" />
+    <Content Include="Content\Products\Big\44384493703112011110651.jpg" />
+    <Content Include="Content\Products\Big\44937761202112011152613.jpg" />
+    <Content Include="Content\Products\Big\45096204104012012153246.jpg" />
+    <Content Include="Content\Products\Big\45557814222122011162231.jpg" />
+    <Content Include="Content\Products\Big\46372732822122011162225.jpg" />
+    <Content Include="Content\Products\Big\47626196722122011143806.jpg" />
+    <Content Include="Content\Products\Big\49176934922122011143737.jpg" />
+    <Content Include="Content\Products\Big\57859918404012012102423.jpg" />
+    <Content Include="Content\Products\Big\58296093304012012154740.jpg" />
+    <Content Include="Content\Products\Big\62542069004012012130030.jpg" />
+    <Content Include="Content\Products\Big\68169700822122011162202.jpg" />
+    <Content Include="Content\Products\Big\71571033104012012153200.jpg" />
+    <Content Include="Content\Products\Big\72744981122122011135127.jpg" />
+    <Content Include="Content\Products\Big\74181450722122011141556.jpg" />
+    <Content Include="Content\Products\Big\81370253022122011162605.jpg" />
+    <Content Include="Content\Products\Big\82450937822122011161411.jpg" />
+    <Content Include="Content\Products\Big\82508368414112011150720.jpg" />
+    <Content Include="Content\Products\Big\84393293422122011161357.jpg" />
+    <Content Include="Content\Products\Big\84547720302112011120126.jpg" />
+    <Content Include="Content\Products\Big\85018159404012012153049.jpg" />
+    <Content Include="Content\Products\Big\91416468822122011144502.jpg" />
+    <Content Include="Content\Products\Big\92014608522122011141543.jpg" />
+    <Content Include="Content\Products\Big\92265999304012012104448.jpg" />
+    <Content Include="Content\Products\Big\97163602822122011142517.jpg" />
+    <Content Include="Content\Products\Big\98987294904012012153222.jpg" />
+    <Content Include="Content\Products\Little\100989838404012012101031.jpg" />
+    <Content Include="Content\Products\Little\102987917222122011161425.jpg" />
+    <Content Include="Content\Products\Little\10527459922122011144455.jpg" />
+    <Content Include="Content\Products\Little\106102894822122011144154.jpg" />
+    <Content Include="Content\Products\Little\106781459522122011135112.jpg" />
+    <Content Include="Content\Products\Little\106820014522122011140738.jpg" />
+    <Content Include="Content\Products\Little\10898875715112011163150.jpg" />
+    <Content Include="Content\Products\Little\109305068222122011141127.jpg" />
+    <Content Include="Content\Products\Little\110830823022122011135901.jpg" />
+    <Content Include="Content\Products\Little\111530147022122011144537.jpg" />
+    <Content Include="Content\Products\Little\111709943022122011141627.jpg" />
+    <Content Include="Content\Products\Little\112247266722122011141121.jpg" />
+    <Content Include="Content\Products\Little\112676776122122011143854.jpg" />
+    <Content Include="Content\Products\Little\113703169614112011163358.jpg" />
+    <Content Include="Content\Products\Little\116375171504012012104438.jpg" />
+    <Content Include="Content\Products\Little\118815181004012012153237.jpg" />
+    <Content Include="Content\Products\Little\119429614722122011161349.jpg" />
+    <Content Include="Content\Products\Little\120875190622122011160234.jpg" />
+    <Content Include="Content\Products\Little\121166949722122011142511.jpg" />
+    <Content Include="Content\Products\Little\121219146722122011162208.jpg" />
+    <Content Include="Content\Products\Little\121341195604012012152940.jpg" />
+    <Content Include="Content\Products\Little\12399405922122011135915.jpg" />
+    <Content Include="Content\Products\Little\12802852022122011141620.jpg" />
+    <Content Include="Content\Products\Little\1282520722122011144523.jpg" />
+    <Content Include="Content\Products\Little\133653280322122011135951.jpg" />
+    <Content Include="Content\Products\Little\135612663322122011162151.jpg" />
+    <Content Include="Content\Products\Little\136733646022122011161402.jpg" />
+    <Content Include="Content\Products\Little\140934682822122011143847.png" />
+    <Content Include="Content\Products\Little\141830513722122011160240.jpg" />
+    <Content Include="Content\Products\Little\144058104902112011120147.jpg" />
+    <Content Include="Content\Products\Little\148086989504012012172230.jpg" />
+    <Content Include="Content\Products\Little\151125103214112011150924.jpg" />
+    <Content Include="Content\Products\Little\152928106415112011163206.jpg" />
+    <Content Include="Content\Products\Little\154886022604012012154747.jpg" />
+    <Content Include="Content\Products\Little\155608446322122011140005.jpg" />
+    <Content Include="Content\Products\Little\157683353522122011135922.jpg" />
+    <Content Include="Content\Products\Little\159768833804012012155947.jpg" />
+    <Content Include="Content\Products\Little\160516482115112011163213.jpg" />
+    <Content Include="Content\Products\Little\160531555422122011141611.jpg" />
+    <Content Include="Content\Products\Little\16183736604012012153037.jpg" />
+    <Content Include="Content\Products\Little\165397826522122011135120.jpg" />
+    <Content Include="Content\Products\Little\165634214404012012140954.jpg" />
+    <Content Include="Content\Products\Little\166567937322122011161431.jpg" />
+    <Content Include="Content\Products\Little\167594436122122011143814.jpg" />
+    <Content Include="Content\Products\Little\168317764004012012141826.jpg" />
+    <Content Include="Content\Products\Little\168336710022122011144531.jpg" />
+    <Content Include="Content\Products\Little\169139449702112011174129.jpg" />
+    <Content Include="Content\Products\Little\174315837014112011155238.jpg" />
+    <Content Include="Content\Products\Little\176496499122122011141643.jpg" />
+    <Content Include="Content\Products\Little\176822418322122011135133.jpg" />
+    <Content Include="Content\Products\Little\177842181804012012172240.jpg" />
+    <Content Include="Content\Products\Little\178966655222122011143746.jpg" />
+    <Content Include="Content\Products\Little\180789021322122011162000.jpg" />
+    <Content Include="Content\Products\Little\181373378204012012104443.jpg" />
+    <Content Include="Content\Products\Little\183249267322122011141537.jpg" />
+    <Content Include="Content\Products\Little\190301645322122011135908.jpg" />
+    <Content Include="Content\Products\Little\192061452522122011161755.jpg" />
+    <Content Include="Content\Products\Little\196383282604012012154755.jpg" />
+    <Content Include="Content\Products\Little\196801139022122011141550.jpg" />
+    <Content Include="Content\Products\Little\197171891804012012155735.jpg" />
+    <Content Include="Content\Products\Little\198317124522122011145000.jpg" />
+    <Content Include="Content\Products\Little\201208939322122011141637.jpg" />
+    <Content Include="Content\Products\Little\20428039822122011144515.jpg" />
+    <Content Include="Content\Products\Little\204306020814112011151030.jpg" />
+    <Content Include="Content\Products\Little\207649676404012012154732.jpg" />
+    <Content Include="Content\Products\Little\211479855122122011160246.jpg" />
+    <Content Include="Content\Products\Little\211817286522122011143839.jpg" />
+    <Content Include="Content\Products\Little\212143763404012012172128.jpg" />
+    <Content Include="Content\Products\Little\212177119704012012153230.jpg" />
+    <Content Include="Content\Products\Little\212294040322122011143731.jpg" />
+    <Content Include="Content\Products\Little\213818052222122011143725.jpg" />
+    <Content Include="Content\Products\Little\22279121214112011155337.jpg" />
+    <Content Include="Content\Products\Little\23949848922122011141133.jpg" />
+    <Content Include="Content\Products\Little\25413813104012012103906.jpg" />
+    <Content Include="Content\Products\Little\26359922422122011162157.jpg" />
+    <Content Include="Content\Products\Little\26956665722122011143821.jpg" />
+    <Content Include="Content\Products\Little\27823223604012012130022.jpg" />
+    <Content Include="Content\Products\Little\28077964904012012153253.jpg" />
+    <Content Include="Content\Products\Little\30304440104012012172121.jpg" />
+    <Content Include="Content\Products\Little\30587755922122011162219.jpg" />
+    <Content Include="Content\Products\Little\32803833722122011135959.jpg" />
+    <Content Include="Content\Products\Little\3731008422122011140011.jpg" />
+    <Content Include="Content\Products\Little\38150660922122011142506.jpg" />
+    <Content Include="Content\Products\Little\39205177104012012172133.jpg" />
+    <Content Include="Content\Products\Little\40961528504012012172235.jpg" />
+    <Content Include="Content\Products\Little\44384493703112011110651.jpg" />
+    <Content Include="Content\Products\Little\44937761202112011152613.jpg" />
+    <Content Include="Content\Products\Little\45096204104012012153246.jpg" />
+    <Content Include="Content\Products\Little\45557814222122011162231.jpg" />
+    <Content Include="Content\Products\Little\46372732822122011162225.jpg" />
+    <Content Include="Content\Products\Little\47626196722122011143806.jpg" />
+    <Content Include="Content\Products\Little\49176934922122011143737.jpg" />
+    <Content Include="Content\Products\Little\57859918404012012102423.jpg" />
+    <Content Include="Content\Products\Little\58296093304012012154740.jpg" />
+    <Content Include="Content\Products\Little\62542069004012012130030.jpg" />
+    <Content Include="Content\Products\Little\68169700822122011162202.jpg" />
+    <Content Include="Content\Products\Little\71571033104012012153200.jpg" />
+    <Content Include="Content\Products\Little\72744981122122011135127.jpg" />
+    <Content Include="Content\Products\Little\74181450722122011141556.jpg" />
+    <Content Include="Content\Products\Little\81370253022122011162605.jpg" />
+    <Content Include="Content\Products\Little\82450937822122011161411.jpg" />
+    <Content Include="Content\Products\Little\82508368414112011150720.jpg" />
+    <Content Include="Content\Products\Little\84393293422122011161357.jpg" />
+    <Content Include="Content\Products\Little\84547720302112011120126.jpg" />
+    <Content Include="Content\Products\Little\85018159404012012153049.jpg" />
+    <Content Include="Content\Products\Little\91416468822122011144502.jpg" />
+    <Content Include="Content\Products\Little\92014608522122011141543.jpg" />
+    <Content Include="Content\Products\Little\92265999304012012104448.jpg" />
+    <Content Include="Content\Products\Little\97163602822122011142517.jpg" />
+    <Content Include="Content\Products\Little\98987294904012012153222.jpg" />
+    <Content Include="Content\Products\Sayfa\1.jpg" />
+    <Content Include="Content\Products\Sayfa\103580019522112011154629.jpg" />
+    <Content Include="Content\Products\Sayfa\114677295722112011145733.jpg" />
+    <Content Include="Content\Products\Sayfa\137542773326092011170454.jpg" />
+    <Content Include="Content\Products\Sayfa\149591985022112011154550.jpg" />
+    <Content Include="Content\Products\Sayfa\149829698926092011170557.jpg" />
+    <Content Include="Content\Products\Sayfa\180373083526092011170625.jpg" />
+    <Content Include="Content\Products\Sayfa\191274586226092011170523.jpg" />
+    <Content Include="Content\Products\Sayfa\198524797126092011170427.jpg" />
+    <Content Include="Content\Products\Sayfa\2.jpg" />
+    <Content Include="Content\Products\Sayfa\204138716522112011154613.jpg" />
+    <Content Include="Content\Products\Sayfa\25289006922112011154655.jpg" />
+    <Content Include="Content\Products\Sayfa\3.jpg" />
+    <Content Include="Content\Products\Sayfa\35194961226092011170613.jpg" />
+    <Content Include="Content\Products\Sayfa\39953001126092011170440.jpg" />
+    <Content Include="Content\Products\Sayfa\71386108822112011154453.jpg" />
+    <Content Include="Content\Products\Sayfa\82387399422112011154527.jpg" />
+    <Content Include="Content\Products\Sayfa\93684814026092011170508.jpg" />
+    <Content Include="Content\Products\Sayfa\en.png" />
+    <Content Include="Content\Products\Sayfa\tr.png" />
+    <Content Include="Content\Products\Small\100989838404012012101031.jpg" />
+    <Content Include="Content\Products\Small\102987917222122011161425.jpg" />
+    <Content Include="Content\Products\Small\10527459922122011144455.jpg" />
+    <Content Include="Content\Products\Small\106102894822122011144154.jpg" />
+    <Content Include="Content\Products\Small\106781459522122011135112.jpg" />
+    <Content Include="Content\Products\Small\106820014522122011140738.jpg" />
+    <Content Include="Content\Products\Small\10898875715112011163150.jpg" />
+    <Content Include="Content\Products\Small\109305068222122011141127.jpg" />
+    <Content Include="Content\Products\Small\110830823022122011135901.jpg" />
+    <Content Include="Content\Products\Small\111530147022122011144537.jpg" />
+    <Content Include="Content\Products\Small\111709943022122011141627.jpg" />
+    <Content Include="Content\Products\Small\112247266722122011141121.jpg" />
+    <Content Include="Content\Products\Small\112676776122122011143854.jpg" />
+    <Content Include="Content\Products\Small\113703169614112011163358.jpg" />
+    <Content Include="Content\Products\Small\116375171504012012104438.jpg" />
+    <Content Include="Content\Products\Small\118815181004012012153237.jpg" />
+    <Content Include="Content\Products\Small\119429614722122011161349.jpg" />
+    <Content Include="Content\Products\Small\120875190622122011160234.jpg" />
+    <Content Include="Content\Products\Small\121166949722122011142511.jpg" />
+    <Content Include="Content\Products\Small\121219146722122011162208.jpg" />
+    <Content Include="Content\Products\Small\121341195604012012152940.jpg" />
+    <Content Include="Content\Products\Small\12399405922122011135915.jpg" />
+    <Content Include="Content\Products\Small\12802852022122011141620.jpg" />
+    <Content Include="Content\Products\Small\1282520722122011144523.jpg" />
+    <Content Include="Content\Products\Small\128272850715082011155542.jpg" />
+    <Content Include="Content\Products\Small\133653280322122011135951.jpg" />
+    <Content Include="Content\Products\Small\135612663322122011162151.jpg" />
+    <Content Include="Content\Products\Small\136733646022122011161402.jpg" />
+    <Content Include="Content\Products\Small\140934682822122011143847.png" />
+    <Content Include="Content\Products\Small\141830513722122011160240.jpg" />
+    <Content Include="Content\Products\Small\144058104902112011120147.jpg" />
+    <Content Include="Content\Products\Small\148086989504012012172230.jpg" />
+    <Content Include="Content\Products\Small\151125103214112011150924.jpg" />
+    <Content Include="Content\Products\Small\152928106415112011163206.jpg" />
+    <Content Include="Content\Products\Small\154886022604012012154747.jpg" />
+    <Content Include="Content\Products\Small\155608446322122011140005.jpg" />
+    <Content Include="Content\Products\Small\157683353522122011135922.jpg" />
+    <Content Include="Content\Products\Small\159768833804012012155947.jpg" />
+    <Content Include="Content\Products\Small\160516482115112011163213.jpg" />
+    <Content Include="Content\Products\Small\160531555422122011141611.jpg" />
+    <Content Include="Content\Products\Small\16183736604012012153037.jpg" />
+    <Content Include="Content\Products\Small\165397826522122011135120.jpg" />
+    <Content Include="Content\Products\Small\165634214404012012140954.jpg" />
+    <Content Include="Content\Products\Small\166567937322122011161431.jpg" />
+    <Content Include="Content\Products\Small\167594436122122011143814.jpg" />
+    <Content Include="Content\Products\Small\168317764004012012141826.jpg" />
+    <Content Include="Content\Products\Small\168336710022122011144531.jpg" />
+    <Content Include="Content\Products\Small\169139449702112011174129.jpg" />
+    <Content Include="Content\Products\Small\172152026013082011122459.jpg" />
+    <Content Include="Content\Products\Small\174315837014112011155238.jpg" />
+    <Content Include="Content\Products\Small\176496499122122011141643.jpg" />
+    <Content Include="Content\Products\Small\176822418322122011135133.jpg" />
+    <Content Include="Content\Products\Small\177842181804012012172240.jpg" />
+    <Content Include="Content\Products\Small\178966655222122011143746.jpg" />
+    <Content Include="Content\Products\Small\180789021322122011162000.jpg" />
+    <Content Include="Content\Products\Small\181373378204012012104443.jpg" />
+    <Content Include="Content\Products\Small\183249267322122011141537.jpg" />
+    <Content Include="Content\Products\Small\190301645322122011135908.jpg" />
+    <Content Include="Content\Products\Small\192061452522122011161755.jpg" />
+    <Content Include="Content\Products\Small\196383282604012012154755.jpg" />
+    <Content Include="Content\Products\Small\196801139022122011141550.jpg" />
+    <Content Include="Content\Products\Small\197171891804012012155735.jpg" />
+    <Content Include="Content\Products\Small\198317124522122011145000.jpg" />
+    <Content Include="Content\Products\Small\201208939322122011141637.jpg" />
+    <Content Include="Content\Products\Small\20428039822122011144515.jpg" />
+    <Content Include="Content\Products\Small\204306020814112011151030.jpg" />
+    <Content Include="Content\Products\Small\207649676404012012154732.jpg" />
+    <Content Include="Content\Products\Small\211479855122122011160246.jpg" />
+    <Content Include="Content\Products\Small\211817286522122011143839.jpg" />
+    <Content Include="Content\Products\Small\212143763404012012172128.jpg" />
+    <Content Include="Content\Products\Small\212177119704012012153230.jpg" />
+    <Content Include="Content\Products\Small\212294040322122011143731.jpg" />
+    <Content Include="Content\Products\Small\213818052222122011143725.jpg" />
+    <Content Include="Content\Products\Small\22279121214112011155337.jpg" />
+    <Content Include="Content\Products\Small\23949848922122011141133.jpg" />
+    <Content Include="Content\Products\Small\25413813104012012103906.jpg" />
+    <Content Include="Content\Products\Small\26359922422122011162157.jpg" />
+    <Content Include="Content\Products\Small\26956665722122011143821.jpg" />
+    <Content Include="Content\Products\Small\27823223604012012130022.jpg" />
+    <Content Include="Content\Products\Small\28077964904012012153253.jpg" />
+    <Content Include="Content\Products\Small\30304440104012012172121.jpg" />
+    <Content Include="Content\Products\Small\30587755922122011162219.jpg" />
+    <Content Include="Content\Products\Small\32803833722122011135959.jpg" />
+    <Content Include="Content\Products\Small\3731008422122011140011.jpg" />
+    <Content Include="Content\Products\Small\38150660922122011142506.jpg" />
+    <Content Include="Content\Products\Small\39205177104012012172133.jpg" />
+    <Content Include="Content\Products\Small\40961528504012012172235.jpg" />
+    <Content Include="Content\Products\Small\44384493703112011110651.jpg" />
+    <Content Include="Content\Products\Small\44937761202112011152613.jpg" />
+    <Content Include="Content\Products\Small\45096204104012012153246.jpg" />
+    <Content Include="Content\Products\Small\45557814222122011162231.jpg" />
+    <Content Include="Content\Products\Small\46372732822122011162225.jpg" />
+    <Content Include="Content\Products\Small\47626196722122011143806.jpg" />
+    <Content Include="Content\Products\Small\49176934922122011143737.jpg" />
+    <Content Include="Content\Products\Small\57859918404012012102423.jpg" />
+    <Content Include="Content\Products\Small\58296093304012012154740.jpg" />
+    <Content Include="Content\Products\Small\61093283413082011131557.jpg" />
+    <Content Include="Content\Products\Small\62542069004012012130030.jpg" />
+    <Content Include="Content\Products\Small\68169700822122011162202.jpg" />
+    <Content Include="Content\Products\Small\71571033104012012153200.jpg" />
+    <Content Include="Content\Products\Small\72744981122122011135127.jpg" />
+    <Content Include="Content\Products\Small\74181450722122011141556.jpg" />
+    <Content Include="Content\Products\Small\7672909013082011131654.jpg" />
+    <Content Include="Content\Products\Small\81370253022122011162605.jpg" />
+    <Content Include="Content\Products\Small\82450937822122011161411.jpg" />
+    <Content Include="Content\Products\Small\82508368414112011150720.jpg" />
+    <Content Include="Content\Products\Small\84393293422122011161357.jpg" />
+    <Content Include="Content\Products\Small\84547720302112011120126.jpg" />
+    <Content Include="Content\Products\Small\85018159404012012153049.jpg" />
+    <Content Include="Content\Products\Small\91416468822122011144502.jpg" />
+    <Content Include="Content\Products\Small\92014608522122011141543.jpg" />
+    <Content Include="Content\Products\Small\92265999304012012104448.jpg" />
+    <Content Include="Content\Products\Small\93353520415082011162325.jpg" />
+    <Content Include="Content\Products\Small\95981176013082011122836.jpg" />
+    <Content Include="Content\Products\Small\97163602822122011142517.jpg" />
+    <Content Include="Content\Products\Small\98987294904012012153222.jpg" />
+    <Content Include="Content\Products\Small\ResimYok.gif" />
+    <Content Include="Content\Style\BannerStyle.css" />
+    <Content Include="Content\Style\jquery.lightbox-0.5.css" />
+    <Content Include="Content\Style\LayoutStyle.css" />
+    <Content Include="Content\Style\style6.css" />
+    <Content Include="Content\Userfiles\image\M720_OH5_1_a65f41c249.jpg" />
+    <Content Include="Content\Userfiles\image\MacroFluo_1_d29dba0854.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="Scripts\facebox.js" />
+    <Content Include="Scripts\Player\flowplayer-3.2.6.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.13.custom.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.easing.js" />
+    <Content Include="Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Scripts\Main.js" />
+    <Content Include="Scripts\Player\flowplayer-3.2.7.swf" />
+    <Content Include="Scripts\Player\flowplayer.controls-3.2.5.swf" />
+    <Content Include="Scripts\Player\player.jpg" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\simpla.jquery.configuration.js" />
+    <Content Include="Areas\Admin\Content\Style\Admin.css" />
+    <Content Include="Areas\Admin\Content\Style\ieStyle.css" />
+    <Content Include="Areas\Admin\Content\Style\Login.css" />
+    <Content Include="Areas\Admin\Content\Style\Reset.css" />
+    <Content Include="Config\LogConfig.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\ui.core.js" />
+    <Content Include="Scripts\ui.progressbar.js" />
+    <Content Include="Views\Product\ProductDetail.cshtml" />
+    <Content Include="Views\Product\ProductMainPage.cshtml" />
+    <Content Include="Views\Product\Products.cshtml" />
+    <Content Include="Views\Product\ProductSearch.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Products\Anasayfa\" />
+    <Folder Include="Content\Products\Brosur\" />
+    <Folder Include="Content\Products\Flash\" />
+    <Folder Include="Content\Userfiles\file\" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ApplicationServer\BusinessLayer\BusinessLayer.csproj">
+      <Project>{84C09341-1960-441B-B810-C7A34F51AB1F}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ApplicationServer\RepositoryLayer\RepositoryLayer.csproj">
+      <Project>{1B06FD0C-6BA8-44CE-AFB5-4A595BE95A87}</Project>
+      <Name>RepositoryLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\GlobalErrorHandler\GlobalErrorHandler.csproj">
+      <Project>{E1F1773F-960A-46C9-A80E-A4DB4D309C7C}</Project>
+      <Name>GlobalErrorHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\ImageLirary\ImageLibrary.csproj">
+      <Project>{6ADF8EDC-3A2D-4E5A-8C56-64DD0D411F9B}</Project>
+      <Name>ImageLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\MailLibrary\MailLibrary.csproj">
+      <Project>{C89EE051-0411-40E6-A68F-046A8F02076C}</Project>
+      <Name>MailLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ApplicationServer\DataAccessLayer\ModelLayer.csproj">
+      <Project>{308031AC-B042-4A30-A761-B85B049F6FE7}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\HttpSecureCookie\SecureCookie.csproj">
+      <Project>{49CA0D94-D0E9-47D0-8712-B4D46A374E69}</Project>
+      <Name>SecureCookie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\LoggerLibrary\LoggerLibrary.csproj">
+      <Project>{8D4A471A-B219-44CB-9C31-06690FAEE1F7}</Project>
+      <Name>LoggerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Admin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Mesajlar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Content.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Ayarlar\Iletisim.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Ayarlar\MailSMTPClint.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Successful.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Alert.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Info.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Arayuz\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Hatalar\HataMesajlari.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Kullanici\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Kullanici\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\SiteDil\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\SiteDil\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Duyuru\Duyurular.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Duyuru\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf5_connector.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf5_upload.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_basexml.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_commands.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_connector.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_io.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_upload.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\cf_util.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\config.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\connector.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\image.cfc" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\ImageObject.cfc" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\cfm\upload.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\lasso\config.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\lasso\connector.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\lasso\upload.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\basexml.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\commands.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\connector.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\io.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\upload.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\upload_fck.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\perl\util.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\basexml.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\commands.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\config.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\connector.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\io.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\phpcompat.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\upload.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\php\util.php" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\config.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\connector.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\fckcommands.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\fckconnector.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\fckoutput.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\fckutil.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\upload.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\wsgi.py" />
+    <None Include="Areas\Admin\Content\fckeditor\editor\filemanager\connectors\py\zope.py" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.cfc" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.php" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.pl" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor.py" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor_php4.php" />
+    <None Include="Areas\Admin\Content\fckeditor\fckeditor_php5.php" />
+    <None Include="Areas\Admin\Content\fckeditor\fckutils.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\adobeair\package.bat" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\adobeair\run.bat" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\adobeair\sample01_cert.pfx" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\fck.afpa" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\fck.afpa.code" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\sample01.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\sample02.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\sample03.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\sample04.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\afp\sampleposteddata.afp" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample01.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample01_mx.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample02.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample02_mx.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample03.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample03_mx.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample04.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sample04_mx.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\cfm\sampleposteddata.cfm" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\html\assets\sample16.fla" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\lasso\sample01.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\lasso\sample02.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\lasso\sample03.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\lasso\sample04.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\lasso\sampleposteddata.lasso" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\perl\sample01.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\perl\sample02.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\perl\sample03.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\perl\sample04.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\perl\sampleposteddata.cgi" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\php\sample01.php" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\php\sample02.php" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\php\sample03.php" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\php\sample04.php" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\php\sampleposteddata.php" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\py\sample01.py" />
+    <None Include="Areas\Admin\Content\fckeditor\_samples\py\sampleposteddata.py" />
+    <Content Include="Areas\Admin\Views\Duyuru\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\IcerikBaslik\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\IcerikBaslik\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\IcerikBaslik\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Icerik\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Icerik\Edit.cshtml" />
+    <Content Include="Views\Include\TopMenuLinks.cshtml" />
+    <Content Include="Views\Content\PageContent.cshtml" />
+    <Content Include="Views\Include\LanguageLinks.cshtml" />
+    <Content Include="Views\Include\Banner.cshtml" />
+    <Content Include="Views\Include\Announcement.cshtml" />
+    <Content Include="Views\Content\Announcement.cshtml" />
+    <Content Include="Views\Error\Http404.cshtml" />
+    <Content Include="Views\Error\Page.cshtml" />
+    <Content Include="Views\Content\Contact.cshtml" />
+    <Content Include="Infrastructure\Captcha.ashx" />
+    <Content Include="Views\Content\Brand.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Error\ApplicationError.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Strings.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Strings.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Strings.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Strings.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ContactForm.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ContactForm.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ContactForm.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ContactForm.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51819</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,64 @@
+﻿@model ModelLayer.IcerikBaslik
+
+@{
+    ViewBag.Title = "Kategori Kaydet";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+     <div class="content-box"><!-- Start Content Box -->
+     <div class="content-box-header">
+					<h3 style="cursor: s-resize;">Yeni Sayfa Oluştur</h3>
+	 <div class="clear"></div>
+	 </div> <!-- End .content-box-header -->
+	 <div style="display: block;" class="content-box-content">
+	 <div style="display: block;" class="tab-content default-tab" id="tab1">
+
+     <div class="linkZemin" >
+         <a href="@Url.Action("Index", "IcerikBaslik", new { dil="tr" })" class="button" > Sayfalar </a>
+     </div>
+
+     
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+        <p> 
+            @Html.LabelFor(model => model.GosterimAlani)
+            <select id="GosterimAlani" name="GosterimAlani" class="text" style="width:200px" >
+            <option value="Ana Menu">Ana Menu</option>
+            <option value="Alt Menu">Alt Menu</option>
+            </select>
+        </p>
+    
+        <p> 
+           <label>Gösterim Şekli</label> 
+            <select id="Urun" name="Urun" class="text" style="width:200px" >
+            <option value="false">Sayfa</option>
+            <option value="true">Ürün</option>
+            </select>
+        </p>
+        <p> 
+            <label>Üst Kategori</label>
+            @Html.DropDownList("Serial",
+            new SelectList(ViewBag.Kategori, "Serial", "KategoriAdi", "-- Kategori Seçiniz --"),
+                      new { @class = "text", @style = "width:200px;" })
+        </p>
+        <p> 
+            @Html.LabelFor(model => model.KategoriAdi)
+            @Html.TextBoxFor(model => model.KategoriAdi, new { @class = "text", @style = "width:300px;" })
+            @Html.ValidationMessageFor(model => model.KategoriAdi)
+        </p>
+        <p> 
+         @Html.LabelFor(model => model.Durum)
+         @Html.CheckBoxFor(model => model.Durum, new { @checked = "checked" })
+         @Html.ValidationMessageFor(model => model.Durum)
+        </p>
+        <p>
+            <input type="submit" value="Kaydet" class="button" />
+        </p>
+}
+
+
+    <div style="clear:both;"> </div>
+	</div> <!-- End #tab1 -->
+	</div> <!-- End .content-box-content -->
+</div>
+     
